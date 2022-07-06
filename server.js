@@ -23,10 +23,10 @@ app.use(express.urlencoded({extended :true}))
 app.use(express.json)
 app.use(cors())
 
-app.get('/', async(request, response) => {
+app.get('/', async (request, response) => {
     try {
         response.render('index.ejs')
-    } catch(error){
+    } catch (error) {
         response.status(500).send({message: error.message})
     }
 })
